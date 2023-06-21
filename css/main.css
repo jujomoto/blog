@@ -1,0 +1,233 @@
+* { 
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+.home-body {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+header {
+	display: grid;
+	grid-template-rows: 50px 90px;
+	/* grid-template-rows: 1fr 1fr; */
+	/* height: 140px; */
+	width: 100%;
+} 
+
+
+header .header-icons-container {
+	background-color: #47cfac;
+	width: 100%;
+
+	/* grid */
+	/* display: grid;
+	place-content: end;
+	grid-template-columns: repeat(5, auto);
+	grid-gap: 10px;
+	align-content: center;
+	padding-right: 20px; */
+
+	/* flex  */
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: 10px;
+	padding: 10px;
+}
+
+header .header-icons-container a span {
+	color: #fff;
+}
+/* header nav {
+	background-color: lightcoral;
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: center;
+}
+header nav section:nth-child(1) {
+	margin-left: 20px;
+}
+header nav section:nth-child(2) {
+	justify-self: end;
+	margin-right: 20px;
+} */
+header nav {
+	background-color: lightcoral;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav section:nth-child(1) {
+	margin-left: 20px;
+}
+
+header nav section:nth-child(2) {
+	margin-right: 20px;
+}
+.nav-logo-container img {
+	width: 150px;
+}
+nav .profile-link a {
+	text-decoration: underline;
+}
+.home-main {
+	background-image: url('../assets/img/Cover.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: calc(100vh - 140px);
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	color: white;
+}
+.home-main section {
+	grid-column: 2;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+}
+.home-main-text {
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 10px;
+	color: #fff;
+}
+.home-main-button {
+	background-color: #47cfac;
+	padding: 5px;
+}
+
+/* blogs  */
+.main-blogs {
+	width: 80%;
+	height: auto;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	margin: 0 auto;
+}
+
+.main-blogs .main-post {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.main-blogs .main-post .image img {
+	width: 100%;
+	padding-right: 20px;
+}
+.main-blogs .main-post .text {
+	padding-top: 50px;
+}
+.main-blogs .grid-post h3 {
+	text-align: center;
+}
+
+.main-blogs .grid-post-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 10px;
+}
+.grid-post-container article img {
+	width: 100%;
+}
+.blogs-button {
+	border: 1px solid #47cfac;
+	padding: 5px 10px;
+	font-size: 12px;
+} 
+footer {
+	width: 100%;
+	height: 80px;
+	background-color: #22272d;
+	border-top: 35px solid #47cfac;
+	text-align: center;
+}
+footer p {
+	color: white;
+}
+.grid-container {
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/* blog page  */
+ .blogpost-img-container {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+}
+.blogpost-img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.contact-main-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: lightgray;
+	padding: 30px 0;
+} 
+.blogpost-main-container h2 {
+	border-bottom: 1px solid #47cfac;
+	padding: 10px 0;
+}
+.grid-container article {
+	margin-bottom: 30px;
+}
+.grid-container article h3 {
+	padding: 20px 0;
+}
+
+.contact-main-container div {
+	display: flex;
+}
+.contact-main-container div img {
+	width: 100px;
+	/* height: 50px; */
+	margin-right: 10px;
+}
+
+.contact-left div, 
+.contact-right div {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+} 
+.contact-left div a,
+.contact-right div a {
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+/* media queries  */
+@media (max-width: 768px) {
+	.main-blogs .main-post {
+		display: block;
+	}
+	body>main>section.main-post  .text p {
+		margin-bottom: 10px;
+	}
+	.main-blogs .grid-post-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.contact-main-container {
+		flex-direction: column;
+	}
+}
